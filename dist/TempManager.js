@@ -13,6 +13,7 @@ class TempManager {
 
     async getMovieData(movieName) {
         let newMovie = await $.get(`/movies/${movieName}`)
+        this.movieData = []
         for (let movie of newMovie){
             this.movieData.push({
                 name: movie.title,

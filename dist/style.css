@@ -1,4 +1,67 @@
-#image{
-    height: 100px;
-    width: 100px
+.container{
+    display: grid;
+    height: 1vh;
+    grid-template-rows: 10% 1fr;
+    grid-gap: 10px;
+    position: absolute;
+    width: 100%;
+
 }
+.h1{
+    position: relative;
+}
+.header{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left:50%;
+    transform: translate(-50%);
+}
+
+#liked{
+    position: absolute;
+    right: 170px;
+}
+
+/* .saveMovie:active{
+    background-color: blue;
+    color: blue;
+} */
+
+#movieInput{
+    position: absolute;
+    /* border: 1px black solid; */
+    left: 50px;
+}
+
+#movieSearch{
+    position: absolute;
+    left: 230px;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 80px;
+}
+
+#image{
+    height: 250px;
+    width: 200px;
+}
+
+.handle{
+    margin: 10px;
+    position: relative;
+}
+
+#id{
+    display: none;
+}
+
+.overview{
+    overflow: hidden;
+}
+

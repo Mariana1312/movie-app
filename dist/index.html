@@ -7,24 +7,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <p>Movies</p>
-    <button id="liked">Liked Movies</button>
-    <br>
-    <br>
-    <input id="movieInput" type="text" placeholder="Search a movie">
-    <button id="movieSearch" onclick=handleSearch()>Search</button>
+
+    <div class="container">
+        <div class="header">
+          <h1>Movies</h1>
+          <input id="movieInput" type="text" placeholder=" Search a movie">
+          <button id="movieSearch" onclick=handleSearch()>Search</button>
+          <button id="liked">Liked Movies</button>
+        </div>
 
     <div class="movies"></div>
+</div>
 
     <script id="movie-template" type="text/x-handlebars-template">
         {{#each allMovieData}}
         <div class="handle">
             <p class="name">{{name}}</p>
-            <p>{{date}}</p>
+            <p>release date: {{date}}</p>
             <img id="image" src=https://image.tmdb.org/t/p/w500{{poster}}>
-            <p>{{overview}}</p>
+            <p class="overview">{{overview}}</p>
             <p id="id">{{id}}</p>
             {{#if _id}}
             <button class="removeMovie">Unlike ☹</button>
